@@ -7,15 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="registration-el" action="" method="post">
-        <h1>Registration</h1>
-        <input class="input-el info" id="firstname" type="text" placeholder="Firstname" required>
-        <input class="input-el info" id="lastname" type="text" placeholder="Lastname" required>
-        <input class="input-el info" id="email" type="email" placeholder="Email" required>
-        <input class="input-el info" id="password" type="password" placeholder="Password" required>
-        <input class="input-el info" id="confirmpassword" type="password" placeholder="Confirm Password" required>
-        <input class="input-el button" id="submit" type="submit" value="register">
-        <p class="footer-el register">Already have an account? <a href="login.html">Login</a> </p>
+    <form id="registration-form" action="" method="post">
+        <header>
+            <img src="/static/bfpseal.jpg" alt="">
+            <div class="text-el">
+                <h1>Bureau of Fire Protection<br>Region IV-A Imus City Fire Station</h1>
+                <p>Imus City, Province of Cavite</p>
+            </div>
+            <img src="/static/imuscityseal.jpg" alt="">
+        </header>
+        <div class="content-el">
+            <h1>ACCOUNT REGISTRATION</h1>
+            <h2>Login Credentials</h1>
+            <hr>
+            <label for="firstname">Username
+                <input class="input-el textfield" id="firstname" type="text" placeholder="Enter First Name">
+            </label>
+            <label for="lastname">Password
+                <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name">
+            </label>
+            <label for="lastname">Confirm Password
+                <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name">
+            </label>
+        </div>
     </form>
 </body>
 </html>
