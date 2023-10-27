@@ -7,14 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="login-info" action="" method="post">
-        <h1>LOGIN</h1>
-        <input class="input-el info" id="username" type="text" placeholder="Username" required>
-        <br>
-        <input class="input-el info" id="password" type="password" placeholder="Password" required>
-        <br>
-        <input class="input-el button" type="submit" value="login">
-        <p class="footer-el">Don't have an account? <a href="registration.html">Create Account</a> </p>
+    <form id="login-form" action="" method="post">
+        <header>
+            <img src="/static/bfpseal.jpg" alt="">
+            <div class="text-el">
+                <h1>Bureau of Fire Protection<br>Region IV-A Imus City Fire Station</h1>
+                <p>Imus City, Province of Cavite</p>
+            </div>
+            <img src="/static/imuscityseal.jpg" alt="">
+        </header>
+        <div class="content-el">
+            <h1>LOGIN</h1>
+            <label for="username">Username
+                <input class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
+            </label>
+            <label for="password">Password
+                <input class="input-el textfield" id="password" type="password" placeholder="Enter Password" required>
+            </label>
+            <a href="">Forgot Password?</a>
+            <hr>
+            <input class="input-el button" type="submit" value="login">
+        </div>
+        <footer>
+            <p class="footer-el">Register an account? <a href="registration.html">Create Account</a> </p>
+        </footer>
     </form>
 </body>
 </html>
