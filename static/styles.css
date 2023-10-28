@@ -16,15 +16,16 @@ form{
 /* header */
 header > img{
     width: 137px;
-    /* margin: 0 20px; */
+    margin: 0 20px;
 }
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 640px;
-    justify-content: space-between;
+    width: inherit;
+    justify-content: center;
     padding-top: 20px;
+    text-align: center;
 }
 .text-el > h1{
     font-size: 13pt;
@@ -33,12 +34,8 @@ header{
     font-size: 10pt;
 }
 /* login */
-#login-form, .content-el{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#login-form{
     width: 781px;
-    height: 600px;
     background-color: #FFFBFB;
     border-radius: 10px;
     text-align: center;
@@ -54,17 +51,14 @@ header{
     background-color: rgba(84, 159, 247, 0.2);
     width: 640px;
     height: 70px;
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 19px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 0;
 }
 .content-el > label{
     font-weight: bold;
     padding-right: 40px;
-    /* background-color: red; */
     margin-bottom: 10px;
-    /* margin-top: 20px; */
 }
 .content-el > a {
     color: #549FF7;
@@ -98,15 +92,17 @@ header{
     background-color: #549FF7;
     border: none;
     color: #FFFEFE;
+    margin-bottom: 20px;
 }
 /* footer */
-.footer-el{
+footer{
     background-color: #E0E1E1;
     height: 51.46px;
     width: 781px;
     border-radius: 0 0 10px 10px;
     padding-top: 17px;
     color: #8F8C8C;
+    text-align: center;
 }
 .footer-el > a{
     color: #3C8BE8;
@@ -114,12 +110,8 @@ header{
 /* Registration */
 #registration-form{
     width: 1000px;
-    height: 1500px;
     background-color: #FFFBFB;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 #registration-form .input-el{
     margin-top: 12px;
@@ -143,19 +135,23 @@ header{
 }
 #warning-text{
     font-size: 13px;
-    /* background-color: red; */
     margin-right: 39px;
     margin-top: 10px;
     color: #8F8C8C;
     font-weight: lighter;
+    
+}
+/* Customizing style input type date */
+input[type="date"]{
+    padding-right: 20px;
+    color: #8F8C8C;
+    font-family: Arial, Helvetica, sans-serif
 }
 /* Customizing style of radio button */
 label[title="gender"]{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
-    /* margin-top: 20px; */
     font-size: 20px;
 }
 .radio-group{
@@ -163,6 +159,9 @@ label[title="gender"]{
     height: 49.55px;
     margin-left: 40px;
     padding-top: 15px;
+}
+label[for="male"], label[for="female"]{
+    font-weight: lighter;
 }
 /* Customizing style of input type file button */
 input[type=file] {
@@ -183,8 +182,12 @@ input[type=file]::file-selector-button {
     cursor: pointer;
 }
 /* Register button */
-#registration-form .content-el .button{
+#registration-form .content-el .button {
     font-weight: 200px ;
-    height: 1909.55px !important;
-    background-color: red;
+    /* background-color: red; */
+    padding: 20px;
+}
+/* Resizing width of registration footer */
+#registration-form footer{
+    width: 1000px;
 }
