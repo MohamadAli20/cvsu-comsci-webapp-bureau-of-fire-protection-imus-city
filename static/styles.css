@@ -3,10 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body, html{
     background-color: #CED5EF;
     font-family: Arial, Helvetica, sans-serif;
     color: #1C1C1C;
+    scroll-behavior: smooth;
 }
 /* form */
 form{
