@@ -50,17 +50,21 @@ header{
     text-align: center;
     font-size: 20px;
 }
-.content-el > h1{
+.content-el h1{
     background-color: rgba(84, 159, 247, 0.2);
     width: 640px;
     height: 70px;
     margin-top: 25px;
     font-size: 19px;
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 .content-el > label{
     font-weight: bold;
     padding-right: 40px;
+    /* background-color: red; */
+    margin-bottom: 10px;
+    /* margin-top: 20px; */
 }
 .content-el > a {
     color: #549FF7;
@@ -95,6 +99,7 @@ header{
     border: none;
     color: #FFFEFE;
 }
+/* footer */
 .footer-el{
     background-color: #E0E1E1;
     height: 51.46px;
@@ -109,22 +114,77 @@ header{
 /* Registration */
 #registration-form{
     width: 1000px;
-    height: 1409px;
+    height: 1500px;
     background-color: #FFFBFB;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#registration-form .content-el h1, h2{
+#registration-form .input-el{
+    margin-top: 12px;
+}
+#registration-form .content-el > h1, h2, hr{
     width: 700px;
 }
 .content-el > h2{
     font-size: 19px;
     text-align: left;
     /* background-color: red; */
-    margin-top: 20px;
+    padding-top: 20px;
 }
 #registration-form .content-el hr{
     width: 700px;
+}
+#registration-form > .content-el > label{
+    /* background-color: red; */
+    width: 600px;
+    text-align: right;
+}
+#warning-text{
+    font-size: 13px;
+    /* background-color: red; */
+    margin-right: 39px;
+    margin-top: 10px;
+    color: #8F8C8C;
+    font-weight: lighter;
+}
+/* Customizing style of radio button */
+label[title="gender"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    /* margin-top: 20px; */
+    font-size: 20px;
+}
+.radio-group{
+    /* width: 306.76px; */
+    height: 49.55px;
+    margin-left: 40px;
+    padding-top: 15px;
+}
+/* Customizing style of input type file button */
+input[type=file] {
+    width: 306.76px;
+    background: #fff;
+    margin-top: 12px;
+    margin-left: 30px;
+    font-size: 16px;
+}
+input[type=file]::file-selector-button {
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    background: #0d45a5;
+    padding: 0 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+/* Register button */
+#registration-form .content-el .button{
+    font-weight: 200px ;
+    height: 1909.55px !important;
+    background-color: red;
 }

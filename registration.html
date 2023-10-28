@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <form id="registration-form" action="" method="post">
@@ -21,15 +21,56 @@
             <h2>Login Credentials</h1>
             <hr>
             <label for="firstname">Username
-                <input class="input-el textfield" id="firstname" type="text" placeholder="Enter First Name">
+                <input class="input-el textfield" id="username" type="text" placeholder="Enter Username">
             </label>
             <label for="lastname">Password
-                <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name">
+                <input class="input-el textfield" id="password" type="password" placeholder="Enter Password">
+                <p id="warning-text">Password must not less than 6 characters</p>
             </label>
             <label for="lastname">Confirm Password
+                <input class="input-el textfield" id="confirm-password" type="password" placeholder="Re-enter Password">
+            </label>
+            <hr>
+            <h2>User Information</h2>
+            <hr>
+            <label for="firstname">First Name
+                <input class="input-el textfield" id="firstname" type="text" placeholder="Enter First Name">
+            </label>
+            <label for="midlle">Middle Name
+                <input class="input-el textfield" id="middlename" type="text" placeholder="Enter Middle Name">
+            </label>
+            <label for="lastname">Last Name
                 <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name">
             </label>
+            <label for="address">Address
+                <input class="input-el textfield" id="address" type="text" placeholder="Enter Address">
+            </label>
+            <label for="birthdate">Birthdate
+                <input class="input-el textfield" id="bithdate" type="date">
+            </label>
+            <label for="gender" title="gender">Gender
+                <div class="radio-group">
+                    <input id="male" name="gender" type="radio" value="male">
+                    <label for="male">Male</label>
+                    <input id="female" name="gender" type="radio">
+                    <label for="female">Female</label>
+                </div>
+            </label>
+            <label for="phonenumber">Phone Number
+                <input class="input-el textfield" type="tel" placeholder="Enter Phone Number">
+            </label>
+            <label for="email">Email Address
+                <input class="input-el textfield" type="email" placeholder="Enter Email Address">
+            </label>
+            <label for="upload-image">Upload Image
+                <input type="file" accept="image/*">
+            </label>
+            <hr>
+            <input class="input-el button" type="submit" value="register">
         </div>
+        <footer>
+            <p class="footer-el">Register an account? <a href="registration.html">Create Account</a> </p>
+        </footer>
     </form>
 </body>
 </html>
