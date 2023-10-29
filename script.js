@@ -8,7 +8,16 @@ btnLogin.addEventListener("click", function(){
     var username = document.forms['login-form']['username'].value;
     var password = document.forms['login-form']['password'].value;
     alert("Username: " + username + "\nPassword: " + password);
-}); 
+});
+
+// show and hide password
+const view = document.getElementById("view-icon");
+
+view.addEventListener("click", function(){
+    document.forms['login-form']['password'].type = "text";
+});
+
+
 
 
 

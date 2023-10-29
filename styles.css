@@ -56,11 +56,6 @@ header{
     font-size: 19px;
     padding: 25px 0;
 }
-.content-el > label{
-    font-weight: bold;
-    padding-right: 40px;
-    margin-bottom: 10px;
-}
 .content-el > a {
     color: #549FF7;
     text-decoration: none;
@@ -77,11 +72,16 @@ header{
 .input-el{
     width: 306.76px;
     height: 49.55px;
-    margin-top: 20px;
     margin-left: 30px;
     font-size: 20px;
     border: 1px solid #9C9C9C;
     border-radius: 5px;
+}
+label{
+    margin-top: 20px;
+    font-weight: bold;
+    padding-right: 40px;
+    width: 500px;
 }
 .textfield{
     padding-left: 25px;
@@ -93,7 +93,7 @@ header{
     background-color: #549FF7;
     border: none;
     color: #FFFEFE;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 /* footer */
 footer{
@@ -113,9 +113,6 @@ footer{
     width: 1000px;
     background-color: #FFFBFB;
     border-radius: 10px;
-}
-#registration-form .input-el{
-    margin-top: 12px;
 }
 #registration-form .content-el > h1, h2, hr{
     width: 700px;
@@ -154,12 +151,13 @@ label[title="gender"]{
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    padding-left: 70px;
 }
 .radio-group{
     /* width: 306.76px; */
     height: 49.55px;
-    margin-left: 40px;
     padding-top: 15px;
+    margin-left: 30px;
 }
 label[for="male"], label[for="female"]{
     font-weight: lighter;
@@ -185,10 +183,22 @@ input[type=file]::file-selector-button {
 /* Register button */
 #registration-form .content-el .button {
     font-weight: 200px ;
-    /* background-color: red; */
     padding: 20px;
 }
 /* Resizing width of registration footer */
 #registration-form footer{
     width: 1000px;
 }
+/* view and hide password */
+label[for="password"]{
+    margin-left: -10px;
+}
+label[for="password"] > img{
+    width: 35px;
+    height: 30px;
+    background-color: #FFFBFB;
+    margin-left: -50px;
+    vertical-align: middle;
+}
+
+
