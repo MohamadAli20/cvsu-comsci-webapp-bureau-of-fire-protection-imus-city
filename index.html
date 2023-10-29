@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <form id="login-form" action="" method="post">
+    <form name="login-form" id="login-form" action="" method="post">
         <header>
             <img src="bfpseal.jpg" alt="">
             <div class="text-el">
@@ -19,18 +19,21 @@
         <div class="content-el">
             <h1>LOGIN</h1>
             <label for="username">Username
-                <input class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
+                <input class="input-el textfield" name="username" type="text" placeholder="Enter Username" required>
             </label>
             <label for="password">Password
-                <input class="input-el textfield" id="password" type="password" placeholder="Enter Password" required>
+                <input class="input-el textfield" name="password" type="password" placeholder="Enter Password" required>
             </label>
             <a href="">Forgot Password?</a>
             <hr>
-            <input class="input-el button" type="submit" value="login">
+            <input id="login-btn" class="input-el button" type="submit" value="login">
         </div>
         <footer>
-            <p class="footer-el">Register an account? <a href="registration.html">Create Account</a> </p>
+            <p  class="footer-el">Register an account? <a href="registration.html">Create Account</a> </p>
         </footer>
+        <p id="text"></p>
+        <script src="script.js"></script>
     </form>
+    
 </body>
 </html>
