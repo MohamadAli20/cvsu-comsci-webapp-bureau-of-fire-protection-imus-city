@@ -94,6 +94,7 @@ label{
     border: none;
     color: #FFFEFE;
     margin: 20px 0;
+    width: 200px;
 }
 /* footer */
 footer{
@@ -120,14 +121,12 @@ footer{
 .content-el > h2{
     font-size: 19px;
     text-align: left;
-    /* background-color: red; */
     padding-top: 20px;
 }
 #registration-form .content-el hr{
     width: 700px;
 }
 #registration-form > .content-el > label{
-    /* background-color: red; */
     width: 600px;
     text-align: right;
 }
