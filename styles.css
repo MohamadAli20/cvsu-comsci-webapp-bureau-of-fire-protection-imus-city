@@ -179,11 +179,6 @@ input[type=file]::file-selector-button {
     color: #fff;
     cursor: pointer;
 }
-/* Register button */
-#registration-form .content-el {
-    font-weight: 200px ;
-    padding: 20px;
-}
 /* Resizing width of registration footer */
 #registration-form footer{
     width: 1000px;
