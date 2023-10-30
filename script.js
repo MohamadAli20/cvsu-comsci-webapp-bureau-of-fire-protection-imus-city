@@ -10,13 +10,15 @@ btnLogin.addEventListener("click", function(){
     alert("Username: " + username + "\nPassword: " + password);
 });
 
-// show and hide password
-const view = document.getElementById("view-icon");
+// show and hide password using mouseover and mouseout
+const viewIcon = document.getElementById("view-icon");
 
-view.addEventListener("click", function(){
+viewIcon.addEventListener("mouseover", function(){
     document.forms['login-form']['password'].type = "text";
 });
-
+viewIcon.addEventListener("mouseout", function(){
+    document.forms['login-form']['password'].type = "password";
+});
 
 
 
