@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <script src="https://kit.fontawesome.com/a68fd5bcf8.js" crossorigin="anonymous"></script>
 <body>
     <form name="login-form" id="login-form" action="" method="post">
         <header>
@@ -17,26 +16,26 @@
             </div>
             <img src="imuscityseal.jpg" alt="">
         </header>
-        <div class="content-el">
+        <main class="content-el">
             <h1>LOGIN</h1>
-            <label for="username">Username
-                <input class="input-el textfield" name="username" type="text" placeholder="Enter Username" required>
-            </label>
-            <label for="password">Password
-                <input class="input-el textfield" name="password" type="password" placeholder="Enter Password" required>
-                <i id="view-icon" class="fa-regular fa-eye"></i>
-            </label>
-            <a href="">Forgot Password?</a>
+            <div>
+                <label for="username">Username
+                    <input class="input-el textfield" name="username" type="text" placeholder="Enter Username" required>
+                </label>
+                <label for="password">Password
+                    <span id="login-view" class="eye-icon"><i class="fa-regular fa-eye"></i></span>
+                    <input id="login-input" class="input-el textfield" name="password" type="password" placeholder="Enter Password" required>
+                </label>
+                <a id="forgot-password" href="">Forgot Password?</a>
+            </div>
             <hr>
             <input id="login-btn" class="input-el button" type="submit" value="login">
-        </div>
+        </main>
         <footer>
-            <p  class="footer-el">Register an account? <a href="registration.html">Create Account</a> </p>
+            <p  class="footer-el">Register an account? <a href="registration.html">Create Account</a></p>
         </footer>
-        <p id="text"></p>
-        <script src="script.js"></script>
-        <script src="https://kit.fontawesome.com/a68fd5bcf8.js" crossorigin="anonymous"></script>
     </form>
-    
+    <script src="script.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a68fd5bcf8.js" crossorigin="anonymous"></script> -->
 </body>
 </html>

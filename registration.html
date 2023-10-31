@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/a68fd5bcf8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="registration-form" action="" method="post">
+    <form id="registration-form" name="registration-form" action="" method="post">
         <header>
             <img src="bfpseal.jpg" alt="">
             <div class="text-el">
@@ -16,61 +17,71 @@
             </div>
             <img src="imuscityseal.jpg" alt="">
         </header>
-        <div class="content-el">
+        <main class="content-el">
             <h1>ACCOUNT REGISTRATION</h1>
-            <h2>Login Credentials</h1>
+            <h2>Login Credentials</h2>
             <hr>
-            <label for="firstname">Username
-                <input class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
-            </label>
-            <label for="lastname">Password
-                <input class="input-el textfield" id="password" type="password" placeholder="Enter Password"  required>
-                <p id="warning-text">Password must not less than 6 characters</p>
-            </label>
-            <label for="lastname">Confirm Password
-                <input class="input-el textfield" id="confirm-password" type="password" placeholder="Re-enter Password" required>
-            </label>
+            <div>
+                <label for="firstname">Username
+                    <input class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
+                </label>
+                <label for="reg-pass">Password
+                    <!-- <span class="eye-icon"><i class="fa-regular fa-eye"></i></span> -->
+                    <input id="reg-pass" class="input-el textfield" name="password" type="password" placeholder="Enter Password"  required>
+                    <p id="warning-message">Password must not less than 6 characters</p>
+                </label>
+                <label for="reg-confirmpass">Confirm Password
+                    <!-- <span class="eye-icon"><i class="fa-regular fa-eye"></i></span> -->
+                    <input id="reg-confirmpass" class="input-el textfield" type="password" placeholder="Re-enter Password" required>
+                    <!-- <p class="warning-message">Password must not less than 6 characters</p> -->
+                </label>
+            </div>
             <hr>
             <h2>User Information</h2>
             <hr>
-            <label for="firstname">First Name
-                <input class="input-el textfield" id="firstname" type="text" placeholder="Enter First Name" required>
-            </label>
-            <label for="midlle">Middle Name
-                <input class="input-el textfield" id="middlename" type="text" placeholder="Enter Middle Name" required>
-            </label>
-            <label for="lastname">Last Name
-                <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name" required>
-            </label>
-            <label for="address">Address
-                <input class="input-el textfield" id="address" type="text" placeholder="Enter Address" required>
-            </label>
-            <label for="birthdate">Birthdate
-                <input class="input-el textfield" id="bithdate" type="date">
-            </label>
-            <label for="gender" title="gender">Gender
-                <div class="radio-group">
-                    <input id="male" name="gender" type="radio" value="male">
-                    <label for="male">Male</label>
-                    <input id="female" name="gender" type="radio">
-                    <label for="female">Female</label>
-                </div>
-            </label>
-            <label for="phonenumber">Phone Number
-                <input class="input-el textfield" type="tel" placeholder="Enter Phone Number" required>
-            </label>
-            <label for="email">Email Address
-                <input class="input-el textfield" type="email" placeholder="Enter Email Address" required>
-            </label>
-            <label for="upload-image">Upload Image
-                <input type="file" accept="image/*" required>
-            </label>
+            <div>
+                <label for="firstname">First Name
+                    <input class="input-el textfield" id="firstname" type="text" placeholder="Enter First Name" required>
+                </label>
+                <label for="midlle">Middle Name
+                    <input class="input-el textfield" id="middlename" type="text" placeholder="Enter Middle Name" required>
+                </label>
+                <label for="lastname">Last Name
+                    <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name" required>
+                </label>
+                <label for="address">Address
+                    <input class="input-el textfield" id="address" type="text" placeholder="Enter Address" required>
+                </label>
+                <label for="birthdate">Birthdate
+                    <input class="input-el textfield" id="bithdate" type="date">
+                </label>
+                <label for="gender" title="gender">Gender
+                    <div class="radio-group">
+                        <input id="male" name="gender" type="radio" value="male">
+                        <label for="male">Male</label>
+                        <input id="female" name="gender" type="radio">
+                        <label for="female">Female</label>
+                    </div>
+                </label>
+                <label for="phonenumber">Phone Number
+                    <input class="input-el textfield" type="tel" placeholder="Enter Phone Number" required>
+                </label>
+                <label for="email">Email Address
+                    <input class="input-el textfield" type="email" placeholder="Enter Email Address" required>
+                </label>
+                <label for="upload-image">Upload Image
+                    <input type="file" accept="image/*" required>
+                </label>
+                
+            </div>
             <hr>
             <input class="input-el button" type="submit" value="register">
-        </div>
+        </main>
         <footer>
             <p class="footer-el">Already have an account? <a href="index.html">Login</a> </p>
         </footer>
     </form>
+    <script src="script.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a68fd5bcf8.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
