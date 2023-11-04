@@ -1,8 +1,5 @@
-// for notice
-alert("This web application is still in progress. \nSila Janna at Sharmine ang tatapos nito hehe\n - Ali");
-
 // get the value of username and password and display it
-const btnLogin = document.getElementById("login-btn");
+const btnLogin = document.getElementById('login-btn');
 
 btnLogin.addEventListener("click", function(){
     var username = document.forms['login-form']['username'].value;
@@ -30,12 +27,4 @@ forgotPass.addEventListener("mouseover", function(){
 forgotPass.addEventListener("mouseout", function(){
     forgotPass.style.textDecoration = "none";
 });
-
-// for registratin form
-// check if both passwords are matches and less than 6 characters
-// const regPass = document.getElementById('reg-pass').value;
-// const regConfirmPass = doocument.getElementById('reg-confirmpass').value;
-// const warningMessage = document.getElementById('warning-message');
-
-
 

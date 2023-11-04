@@ -78,12 +78,12 @@ header{
     width: 306.76px;
     height: 49.55px;
     margin-left: 30px;
-    font-size: 20px;
+    font-size: 15px;
     border: 1px solid #9C9C9C;
     border-radius: 5px;
 }
 label{
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: bold;
 }
 .textfield{
@@ -150,8 +150,9 @@ footer{
     text-align: right;
 }
 #warning-message{
+    text-align: left;
     font-size: 13px;
-    margin-right: 39px;
+    padding-left: 220px;
     margin-top: 10px;
     color: #8F8C8C;
     font-weight: lighter;
