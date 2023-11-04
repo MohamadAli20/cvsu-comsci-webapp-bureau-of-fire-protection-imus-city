@@ -93,7 +93,7 @@ label{
 label[for="password"]{
     position: relative;
 }
-.eye-icon{
+.login-eye-icon{
     position: absolute;
     height: 100%;
     top: 0;
@@ -148,6 +148,14 @@ footer{
 }
 #registration-form > .content-el > div > label{
     text-align: right;
+}
+.reg-eye-icon{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 10px;
+    display: flex;
+    align-items: center;
 }
 #warning-message{
     text-align: left;

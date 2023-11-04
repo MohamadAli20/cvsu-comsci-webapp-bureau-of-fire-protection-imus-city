@@ -25,14 +25,14 @@
                 <label for="firstname">Username
                     <input class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
                 </label>
-                <label for="reg-pass">Password
-                    <!-- <span class="eye-icon"><i class="fa-regular fa-eye"></i></span> -->
+                <label for="password">Password
+                    <span id="reg-password" class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
                     <input id="reg-pass" name="reg-pass" class="input-el textfield"  type="password" placeholder="Enter Password" required>
-                    <p id="warning-message">Password must not less than 6 characters</p>
                 </label>
-                <label for="reg-confirmpass">Confirm Password
-                    <!-- <span class="eye-icon"><i class="fa-regular fa-eye"></i></span> -->
-                    <input id="reg-confirmpass" name="reg-confirmpass" class="input-el textfield" type="password" placeholder="Re-enter Password" required>
+                <p id="warning-message">Password must not less than 6 characters</p>
+                <label for="password">Confirm Password
+                    <span class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
+                    <input id="confirm-password" name="reg-confirmpass" class="input-el textfield" type="password" placeholder="Re-enter Password" required>
                     <!-- <p class="warning-message">Password must not less than 6 characters</p> -->
                 </label>
             </div>
@@ -81,11 +81,12 @@
         </footer>
     </form>
     <script>
+        // Check password length and correct sequence of characters
         const btnReg = document.getElementById('register-btn');
         var warningMessage = document.getElementById('warning-message');
 
         btnReg.addEventListener('click', function(){
-            // Check password length and correct sequence of characters
+            
             var regPass = document.forms['registration-form']['reg-pass'].value;
             var regConfirmPass = document.forms['registration-form']['reg-confirmpass'].value;
 
@@ -111,6 +112,24 @@
             }else{
                 warningMessage.innerHTML = "Passwords are not matched!";
             }  
+        });
+        // view and hide password
+        const password = document.getElementById('reg-password');
+        const confirmPass = document.getElementById('confirm-password');
+
+        // minimize this code if possible
+        password.addEventListener('mouseover', function(){
+            document.forms['registration-form']['reg-pass'].type = "text";
+        });
+        password.addEventListener('mouseout', function(){
+            document.forms['registration-form']['reg-pass'].type = "password";
+        });
+
+        confirmPass.addEventListener('mouseover', function(){
+            document.forms['registration-form']['reg-confirmpass'].type = "text";
+        });
+        confirmPass.addEventListener('mouseout', function(){
+            document.forms['registration-form']['reg-confirmpass'].type = "password";
         });
     </script>
 </body>
