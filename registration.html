@@ -27,12 +27,12 @@
                 </label>
                 <label for="password">Password
                     <span id="reg-password" class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
-                    <input id="reg-pass" name="reg-pass" class="input-el textfield"  type="password" placeholder="Enter Password" required>
+                    <input id="input-regpass" name="input-regpass" class="input-el textfield"  type="password" placeholder="Enter Password" required>
                 </label>
                 <p id="warning-message">Password must not less than 6 characters</p>
                 <label for="password">Confirm Password
-                    <span class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
-                    <input id="confirm-password" name="reg-confirmpass" class="input-el textfield" type="password" placeholder="Re-enter Password" required>
+                    <span id="reg-confirmpass" class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
+                    <input id="input-confirmpass" name="input-confirmpass" class="input-el textfield" type="password" placeholder="Re-enter Password" required>
                     <!-- <p class="warning-message">Password must not less than 6 characters</p> -->
                 </label>
             </div>
@@ -87,8 +87,8 @@
 
         btnReg.addEventListener('click', function(){
             
-            var regPass = document.forms['registration-form']['reg-pass'].value;
-            var regConfirmPass = document.forms['registration-form']['reg-confirmpass'].value;
+            var regPass = document.forms['registration-form']['input-regpass'].value;
+            var regConfirmPass = document.forms['registration-form']['input-confirmpass'].value;
 
             // check if the two passwords are matched
             if(regPass === regConfirmPass){
@@ -115,21 +115,21 @@
         });
         // view and hide password
         const password = document.getElementById('reg-password');
-        const confirmPass = document.getElementById('confirm-password');
+        const confirmPass = document.getElementById('reg-confirmpass');
 
         // minimize this code if possible
         password.addEventListener('mouseover', function(){
-            document.forms['registration-form']['reg-pass'].type = "text";
+            document.forms['registration-form']['input-regpass'].type = "text";
         });
         password.addEventListener('mouseout', function(){
-            document.forms['registration-form']['reg-pass'].type = "password";
+            document.forms['registration-form']['input-regpass'].type = "password";
         });
 
         confirmPass.addEventListener('mouseover', function(){
-            document.forms['registration-form']['reg-confirmpass'].type = "text";
+            document.forms['registration-form']['input-confirmpass'].type = "text";
         });
         confirmPass.addEventListener('mouseout', function(){
-            document.forms['registration-form']['reg-confirmpass'].type = "password";
+            document.forms['registration-form']['input-confirmpass'].type = "password";
         });
     </script>
 </body>
