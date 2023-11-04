@@ -99,8 +99,10 @@ label[for="password"]{
     top: 0;
     right: 110px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: red;
+    width: 30px;
+    color: #8F8C8C;
 }
 .button{
     font-size: 16px;
@@ -156,7 +158,10 @@ footer{
     top: 0;
     right: 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    color: #8F8C8C;
+    width: 30px;
 }
 #warning-message{
     text-align: left;

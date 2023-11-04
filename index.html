@@ -23,7 +23,7 @@
                     <input class="input-el textfield" name="username" type="text" placeholder="Enter Username" required>
                 </label>
                 <label for="password">Password
-                    <span id="login-view" class="login-eye-icon"><i class="fa-regular fa-eye"></i></span>
+                    <span id="login-view" class="login-eye-icon"><i id="eye-icon" class="fa-regular fa-eye"></i></span>
                     <input id="login-input" class="input-el textfield" name="password" type="password" placeholder="Enter Password" required>
                 </label>
                 <a id="forgot-password" href="">Forgot Password?</a>
@@ -45,16 +45,20 @@
             alert("Username: " + username + "\nPassword: " + password);
         });
 
-        // show and hide password using mouseover and mouseout
+        // viiew and hide password using mouseover and mouseout
         // for login form
         const loginView = document.getElementById('login-view');
+        const eyeIcon = document.getElementById('eye-icon');
+
         loginView.addEventListener("mouseover", function(){       
             // document.getElementById('login-input').type = "text";
             document.forms['login-form']['password'].type = "text";
+            eyeIcon.className = "fa-regular fa-eye-slash";
         });
         loginView.addEventListener("mouseout", function(){
             // document.getElementById('login-input').type = "password";
             document.forms['login-form']['password'].type = "password";
+            eyeIcon.className = "fa-regular fa-eye";
         });
 
         // forgot password

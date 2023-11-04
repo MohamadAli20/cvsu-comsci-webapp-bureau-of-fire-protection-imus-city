@@ -22,16 +22,16 @@
             <h2>Login Credentials</h2>
             <hr>
             <div>
-                <label for="firstname">Username
-                    <input class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
+                <label for="username">Username
+                    <input name="username" class="input-el textfield" id="username" type="text" placeholder="Enter Username" required>
                 </label>
                 <label for="password">Password
-                    <span id="reg-password" class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
+                    <span id="reg-password" class="reg-eye-icon"><i id="eye-icon1" class="fa-regular fa-eye"></i></span>
                     <input id="input-regpass" name="input-regpass" class="input-el textfield"  type="password" placeholder="Enter Password" required>
                 </label>
                 <p id="warning-message">Password must not less than 6 characters</p>
                 <label for="password">Confirm Password
-                    <span id="reg-confirmpass" class="reg-eye-icon"><i class="fa-regular fa-eye"></i></span>
+                    <span id="reg-confirmpass" class="reg-eye-icon"><i id="eye-icon2" class="fa-regular fa-eye"></i></span>
                     <input id="input-confirmpass" name="input-confirmpass" class="input-el textfield" type="password" placeholder="Re-enter Password" required>
                     <!-- <p class="warning-message">Password must not less than 6 characters</p> -->
                 </label>
@@ -41,19 +41,19 @@
             <hr>
             <div>
                 <label for="firstname">First Name
-                    <input class="input-el textfield" id="firstname" type="text" placeholder="Enter First Name" required>
+                    <input class="input-el textfield" name="firstname" type="text" placeholder="Enter First Name" required>
                 </label>
                 <label for="midlle">Middle Name
-                    <input class="input-el textfield" id="middlename" type="text" placeholder="Enter Middle Name" required>
+                    <input class="input-el textfield" name="middlename" type="text" placeholder="Enter Middle Name" required>
                 </label>
                 <label for="lastname">Last Name
-                    <input class="input-el textfield" id="lastname" type="text" placeholder="Enter Last Name" required>
+                    <input class="input-el textfield" name="lastname" type="text" placeholder="Enter Last Name" required>
                 </label>
                 <label for="address">Address
-                    <input class="input-el textfield" id="address" type="text" placeholder="Enter Address" required>
+                    <input class="input-el textfield" name="address" type="text" placeholder="Enter Address" required>
                 </label>
                 <label for="birthdate">Birthdate
-                    <input class="input-el textfield" id="bithdate" type="date">
+                    <input class="input-el textfield" name="bithdate" type="date">
                 </label>
                 <label for="gender" title="gender">Gender
                     <div class="radio-group">
@@ -64,13 +64,13 @@
                     </div>
                 </label>
                 <label for="phonenumber">Phone Number
-                    <input class="input-el textfield" type="tel" placeholder="Enter Phone Number" required>
+                    <input class="input-el textfield" name="phone-number" type="tel" placeholder="Enter Phone Number" required>
                 </label>
                 <label for="email">Email Address
-                    <input class="input-el textfield" type="email" placeholder="Enter Email Address" required>
+                    <input class="input-el textfield" name="email-address" type="email" placeholder="Enter Email Address" required>
                 </label>
                 <label for="upload-image">Upload Image
-                    <input type="file" accept="image/*" required>
+                    <input name="image" type="file" accept="image/*" required>
                 </label>
             </div>
             <hr>
@@ -84,12 +84,11 @@
         // Check password length and correct sequence of characters
         const btnReg = document.getElementById('register-btn');
         var warningMessage = document.getElementById('warning-message');
-
+        
         btnReg.addEventListener('click', function(){
-            
             var regPass = document.forms['registration-form']['input-regpass'].value;
             var regConfirmPass = document.forms['registration-form']['input-confirmpass'].value;
-
+        
             // check if the two passwords are matched
             if(regPass === regConfirmPass){
                 var regex = /^[a-z][a-z][a-z]+\d+\W/i;
@@ -113,25 +112,49 @@
                 warningMessage.innerHTML = "Passwords are not matched!";
                 warningMessage.style.color = "red";
             }  
+             // display information
+            var username = document.forms['registration-form']['username'].value;
+            // password and confirm password already defined above
+            var firstname = document.forms['registratin-form']['firstname'].value;
+            var middlename = document.forms['registration-form']['middlename'].value;
+            var lastname = document.forms['registration-form']['lastname'].value;
+            var address = document.forms['registration-form']['address'].value;
+            // var birthdate = document.forms['registration-form']['birthdate'].value;
+            // var gender = document.forms['registration-form']['gender'].value;
+            // var phoneNumber = document.forms['registration-form']['phone-number'].value;
+            // var email = document.forms['registration-form']['email-address'].value;
+            // var image = document.forms['registration-form']['image'].value;
+
+            alert(  username + "\n" +
+                    regPass + "\n" +
+                    regConfirmPass        
+            );
         });
         // view and hide password
         const password = document.getElementById('reg-password');
         const confirmPass = document.getElementById('reg-confirmpass');
+        const eyeIcon1 = document.getElementById('eye-icon1');
+        const eyeIcon2 = document.getElementById('eye-icon2');
 
         // minimize this code if possible
         password.addEventListener('mouseover', function(){
             document.forms['registration-form']['input-regpass'].type = "text";
+            eyeIcon1.className = "fa-regular fa-eye-slash";
         });
         password.addEventListener('mouseout', function(){
             document.forms['registration-form']['input-regpass'].type = "password";
+            eyeIcon1.className = "fa-regular fa-eye";
         });
 
         confirmPass.addEventListener('mouseover', function(){
             document.forms['registration-form']['input-confirmpass'].type = "text";
+            eyeIcon2.className = "fa-regular fa-eye-slash";
         });
         confirmPass.addEventListener('mouseout', function(){
             document.forms['registration-form']['input-confirmpass'].type = "password";
+            eyeIcon2.className = "fa-regular fa-eye";
         });
+
     </script>
 </body>
-</html>
+</html> 
