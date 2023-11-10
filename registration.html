@@ -81,7 +81,7 @@
         </footer>
     </form>
     <script>
-        // Check password length and correct sequence of characters
+        // Check the password length and the correct sequence of characters.
         const btnReg = document.getElementById('register-btn');
         var warningMessage = document.getElementById('warning-message');
         
@@ -89,10 +89,10 @@
             var regPass = document.forms['registration-form']['input-regpass'].value;
             var regConfirmPass = document.forms['registration-form']['input-confirmpass'].value;
         
-            // check if the two passwords are matched
+            // check if the two passwords match
             if(regPass === regConfirmPass){
                 var regex = /^[a-z]+\d+\W/i;
-                // search for the pattern
+                // search for match pattern from inputted password
                 var result = regPass.match(regex);
                 // conditional statements
                 if(regPass.length < 6){
@@ -102,7 +102,7 @@
                     warningMessage.innerHTML = "Password is too long.";
                     warningMessage.style.color = "red";
                 }else if(result == null){
-                    warningMessage.innerHTML = "Password must contains at least 1 number and special character.";
+                    warningMessage.innerHTML = "Password must contains at least 1 number and 1 special character.";
                     warningMessage.style.color = "orange";
                 }else{
                     warningMessage.innerHTML = "Very good password!";
